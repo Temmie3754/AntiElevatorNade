@@ -1,7 +1,4 @@
-﻿using Exiled.API.Enums;
-using Exiled.API.Features;
-using Server = Exiled.Events.Handlers.Server;
-using Player = Exiled.Events.Handlers.Player;
+﻿using Exiled.API.Features;
 using Map = Exiled.Events.Handlers.Map;
 using System;
 
@@ -18,7 +15,7 @@ namespace AntiElevatorNade
         public static AntiElevatorNade Instance => Singleton;
         public override string Author => "TemmieGamerGuy";
         public override string Name => "AntiElevatorNade";
-        public override Version Version => new Version(1, 0, 1);
+        public override Version Version => new Version(1, 0, 2);
         public override Version RequiredExiledVersion => new Version(3, 0, 0);
 
         private Handlers.Map map;
