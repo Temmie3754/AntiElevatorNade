@@ -1,4 +1,4 @@
-﻿using System.Linq;
+using System.Linq;
 using Exiled.Events.EventArgs;
 
 namespace AntiElevatorNade.Handlers
@@ -11,7 +11,7 @@ namespace AntiElevatorNade.Handlers
             if (ev.IsFrag) 
             {
                 // Checks if all affected players and thrower are of same side
-                if (ev.TargetsToAffect.Count > 1 && ev.TargetsToAffect.All(player => ev.Thrower.Side == player.Side))
+                if (ev.TargetsToAffect.Count >= AntiElevatorNade.Instance.Config.MinimumPlayersGrenade && ev.TargetsToAffect.All(player => ev.Thrower.Side == player.Side))
                 {
                     foreach (Lift lift in Exiled.API.Features.Map.Lifts)
                     {
@@ -26,6 +26,7 @@ namespace AntiElevatorNade.Handlers
                                 // Checks config to see if thrower should be damaged by their grenade and is affected by explosion
                                 if (AntiElevatorNade.Instance.Config.KillThrower == true && ev.TargetsToAffect.Contains(ev.Thrower))
                                 {
+                                    ev.Thrower.ShowHint(AntiElevatorNade.Instance.Config.ThrowerHint, 5); // Gives hint to thrower
                                     ev.Thrower.Hurt(1000, ev.Thrower, DamageTypes.Grenade); // Kills the thrower
                                 }
                                 return;
