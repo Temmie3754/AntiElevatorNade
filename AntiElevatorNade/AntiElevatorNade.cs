@@ -37,6 +37,7 @@ namespace AntiElevatorNade
         public override void OnDisabled()
         {
             UnregisterEvents();
+            Singleton = null;
             base.OnDisabled();
         }
     }
