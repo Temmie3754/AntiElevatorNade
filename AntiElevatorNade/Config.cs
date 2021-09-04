@@ -10,7 +10,7 @@ namespace AntiElevatorNade
         [Description("The minimum players to trigger the anti elevator grenade")]
         public int MinimumPlayersGrenade { get; set; } = 2;
 
-        [Description("Should the thrower of the grenade take damage from the explosion")]
+        [Description("Should the thrower of the grenade take damage if they are within the explosion")]
         public bool KillThrower { get; set; } = true;
 
         [Description("The message said to the thrower when they die, leave blank to disable")]
