@@ -1,3 +1,4 @@
+![img](https://img.shields.io/github/downloads/TemmieGamerGuy/AntiElevatorNade/total.svg)
 # AntiElevatorNade
  An SCP:SL EXILED plugin to disable friendly fire elevator grenades
  
