@@ -10,8 +10,8 @@ namespace AntiElevatorNade
         public static AntiElevatorNade Instance => Singleton;
         public override string Author => "TemmieGamerGuy";
         public override string Name => "AntiElevatorNade";
-        public override Version Version => new Version(1, 0, 5);
-        public override Version RequiredExiledVersion => new Version(3, 0, 0);
+        public override Version Version => new Version(2, 0, 0);
+        public override Version RequiredExiledVersion => new Version(5, 2, 1);
 
         private Handlers.Map map;
 
